@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const filmes = JSON.parse(localStorage.getItem("FILMES")) ?? {};
     let resultado;
 
+    console.log(import.meta.env);
+
     const key = import.meta.env.VITE_KEY;
 
     //NavForm
