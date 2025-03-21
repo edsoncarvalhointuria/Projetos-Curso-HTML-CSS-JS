@@ -8,7 +8,7 @@ Este projeto é uma recriação da homepage da empresa Hashtag Treinamentos, des
 
 
 
-📌 **Acesse:**[Link do projeto]()
+📌 **Acesse:**[Link do projeto](https://monumental-blancmange-f41380.netlify.app/)
 
 
 
