@@ -1,0 +1,1081 @@
+/* Global */
+
+/*
+Fontes:
+h1  	2.986rem	
+h2  	2.488rem	
+h3  	2.074rem	
+h4	    1.728rem	
+h5  	1.44rem	
+h6  	1.2rem	
+p	    1rem	
+small	0.833rem	
+        0.694rem	
+*/
+
+/* 
+Espaçamentos:
+h1	    3.815rem	
+h2	    3.052rem	
+
+h3	    2.441rem	
+h4	    1.953rem	
+h5	    1.563rem	
+h6	    1.25rem	
+p	    1rem	
+small	0.8rem	
+        0.64rem	
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #404040;
+    line-height: 1.4;
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+a {
+    color: #404040;
+}
+
+p {
+    font-size: 1.6rem;
+    /* line-height: 1.4; */
+}
+
+strong {
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 3.5rem;
+}
+
+.botao:link,
+.botao:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.4rem;
+
+    background-image: linear-gradient(
+        0deg,
+        rgb(230, 111, 25),
+        rgba(255, 106, 0, 0.937)
+    );
+
+    padding: 0.7rem 6rem;
+    border-radius: 50rem;
+    border-bottom: solid 0.6rem rgb(148, 62, 0);
+    border-right: solid 0.6rem rgb(148, 62, 0);
+    /* box-shadow: 0.3rem 0.25rem 0.1rem 0.2rem rgb(148, 62, 0); */
+}
+
+.botao:hover,
+.botao:active {
+    color: rgb(148, 62, 0);
+    background: #fff;
+    border: none;
+    border-top: solid 0.3rem #fff;
+    border-bottom: solid 0.3rem #fff;
+    border-left: solid 0rem #fff;
+    border-right: solid 0rem #fff;
+    box-shadow: 0rem 0rem 0.9rem rgba(0, 0, 0, 0.64);
+}
+
+li::marker {
+    content: none;
+}
+
+/* Navbar */
+ul#navbar a:link,
+ul#navbar a:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: #112e61;
+    font-weight: 600;
+}
+
+#navbar .outros-cursos-link::after {
+    content: "\25BC";
+}
+.outros-cursos {
+    position: relative;
+}
+
+.outros-cursos:hover .lista-outros-cursos {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 0rem;
+    position: absolute;
+    z-index: 9999;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-wrap: unset;
+
+    transform: translateX(-40%);
+    border-radius: 3rem;
+}
+
+ul.lista-outros-cursos {
+    display: none;
+}
+ul.lista-outros-cursos li {
+    white-space: nowrap;
+}
+
+ul#navbar a:hover,
+ul#navbar a:active {
+    color: #f60;
+}
+ul.lista-outros-cursos {
+    padding: 0.6rem 0rem;
+}
+nav ul {
+    display: flex;
+    flex-flow: row;
+    gap: 1.5rem;
+}
+
+.lista-outros-cursos li {
+    padding: 0.6rem 2rem;
+}
+
+.lista-outros-cursos li ~ li {
+    border-top: solid 0.1rem rgba(0, 0, 0, 0.151);
+}
+
+header {
+    position: sticky;
+    z-index: 9999;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 0;
+    padding: 1.5rem 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    margin-left: 1.1rem;
+}
+
+/* Primeira sessão */
+.hero {
+    background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/BACKGROUN-banner-01.png);
+
+    background-size: cover;
+    background-position: 50%;
+    box-shadow: 1rem 0rem 0.5rem rgba(0, 0, 0, 0.396);
+}
+
+.hero-secao-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3rem;
+    padding: 2rem 5rem;
+}
+
+.secao {
+    padding: 7rem 5rem;
+}
+
+.container {
+    max-width: 100rem;
+    margin: 0rem auto;
+}
+
+p.texto-topo {
+    font-size: 1.9rem;
+    margin-bottom: 1.6rem;
+    /* font-weight: 400;<-- Esse é o padrão */
+}
+
+.hero iframe {
+    border-radius: 4rem;
+    display: inline-block;
+    aspect-ratio: 16/9;
+    width: 50rem;
+    height: auto;
+}
+
+.hero-secao {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 3rem;
+    padding: 0rem 4rem;
+}
+
+.hero-secao-texto {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 3rem;
+}
+
+.hero-secao-botoes {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2rem;
+}
+
+/* Segunda Sessão */
+
+.secao-cursos-gratuitos {
+    background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/BACKGROUN-banner-02.png);
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 1rem 0rem 0rem rgba(0, 0, 0, 0.5);
+}
+
+.secao-cursos-gratuitos-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+h2.titulo-home span {
+    font-weight: 600;
+}
+
+.secao-cursos-gratuitos-imagem {
+    align-self: flex-end;
+}
+
+.secao-cursos-gratuitos-titulo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+span.titulo-cursos {
+    color: #7a40be;
+    font-weight: 600;
+}
+
+.secao-cursos-gratuitos-cursos {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.secao-cursos-gratuitos-lista {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+h3.intertitulo-cursos {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 2.3rem;
+    color: #fff;
+    background-image: linear-gradient(90deg, #a854e2, #6e45ba);
+    padding: 0.2rem 1.8rem;
+    border-radius: 1.1rem;
+
+    position: absolute;
+    top: 0rem;
+    left: 50%;
+
+    box-shadow: 1rem 0rem 1rem rgba(0, 0, 0, 0.5);
+
+    transform: rotate(-3.5deg) translateX(-50%) translateY(-50%);
+}
+.lista-link-cursos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.9rem;
+    gap: 0.9rem;
+}
+
+.lista-link-cursos div {
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 50rem;
+    background: #eee;
+    box-shadow: 0rem 0rem 0.8rem 0.01rem rgba(0, 0, 0, 0.233) inset;
+
+    width: 5rem;
+    height: 5rem;
+}
+
+.lista-link-cursos a {
+    text-decoration: none;
+}
+.lista-link-cursos img {
+    padding: 0.3rem;
+    width: 100%;
+}
+
+.img-computer {
+    aspect-ratio: 16/9;
+    width: 44.1rem;
+    height: auto;
+}
+
+.redes-sociais-cursos {
+    display: flex;
+    justify-self: stretch;
+    align-self: stretch;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.redes-sociais-cursos a:link,
+.redes-sociais-cursos a:visited {
+    font-size: 1.9rem;
+    /* font-weight: 400; <-- Esse é o padrão*/
+    text-decoration: none;
+    align-self: stretch;
+    justify-self: stretch;
+    display: flex;
+    flex-flow: column;
+    background: #eee;
+    padding: 0;
+    margin-bottom: 0.7rem;
+    padding: 0.3rem 3.5rem;
+    border-radius: 50rem;
+    box-shadow: 0rem 0rem 0.8 0.2rem rgba(0, 0, 0, 0.192) inset;
+}
+
+.redes-sociais-cursos div a {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: left;
+    align-items: center;
+}
+
+.redes-sociais-cursos a:hover {
+    color: blue;
+    text-decoration: underline;
+    text-decoration-line: underline;
+}
+
+.redes-sociais-cursos img {
+    height: 1.8rem;
+    margin-right: 0.7rem;
+}
+
+.lista-cursos-redes-sociais {
+    /* border: 0.1rem solid black; */
+    border-radius: 2.2rem;
+    display: flex;
+    flex-flow: column wrap;
+    box-shadow: 0.1rem 0rem 0.9rem rgba(0, 0, 0, 0.351) inset;
+    padding: 1rem;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Terceira Sessão */
+/* h2.titulo-diferenciais {
+  color: #fff;
+} */
+
+.sessao-diferenciais {
+    /* border: 0.1rem solid black; */
+    border-radius: 4rem;
+    background-color: #f9f9f9;
+    box-shadow: inset 0rem 0rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    padding: 0rem;
+}
+
+.sessao-diferenciais-inicial {
+    background-color: #f4f5f7;
+}
+
+.sessao-diferenciais-resto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.sessao-diferenciais-opcoes img {
+    background: #ffaf00;
+    padding: 0.9rem;
+    border-radius: 2rem;
+    position: absolute;
+    width: 9rem;
+    height: auto;
+    top: 0rem;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    box-shadow: inset 0rem 0rem 2rem 0.5rem rgba(0, 0, 0, 0.153);
+}
+
+.sessao-diferenciais-opcoes {
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0rem 0rem 2rem 0.5rem rgba(0, 0, 0, 0.153);
+    width: 40rem;
+    position: relative;
+    /* margin: 0rem auto; */
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    text-align: center;
+}
+.sessao-diferenciais-opcoes p {
+    padding-bottom: 1rem;
+}
+
+h2.titulo-diferenciais strong {
+    font-weight: 600;
+}
+
+.sessao-diferenciais-titulo {
+    background-image: linear-gradient(225deg, #196b9f, #1a82a7);
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+    padding: 6rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 6rem;
+    flex: 1 1 0rem;
+}
+
+.sessao-diferenciais-titulo p {
+    text-align: right;
+    line-height: 1.6;
+}
+
+/* .sessao-diferenciais-titulo p,
+.sessao-diferenciais-titulo-h2 {
+    display: inline-block;
+} */
+.sessao-diferenciais-resto {
+    padding: 3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5rem;
+}
+
+.sessao-diferenciais-titulo-h2 {
+    /* width: 45rem;
+    height: auto; */
+    border-left: solid 0.5rem #ffaf00;
+    color: #fff;
+    padding-left: 3rem;
+}
+
+p.p-titulo-diferenciais {
+    color: #fff;
+    font-size: 1.9rem;
+    /* font-weight: 400; <-- Esse é o padrão*/
+}
+
+h3.intertitulo-diferenciais {
+    color: #005e88;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-top: 5rem;
+}
+
+a.link-diferenciais {
+    color: #005e88;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.diferenciais-empresas {
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.diferenciais-empresas-session img {
+    width: 9rem;
+    filter: grayscale(100%);
+}
+
+.diferenciais-empresas-session-img {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 15rem;
+}
+
+/* Quarta Sessão */
+.sessao-oque-falam {
+    background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/BACKGROUN-banner-04.png);
+    background-size: cover;
+    color: #fff;
+}
+
+.oque-falam {
+    padding: 0rem;
+    text-align: center;
+}
+
+.o-que-falam-titulo img {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.o-que-falam-titulo h2 {
+    display: inline-block;
+    padding-bottom: 3rem;
+}
+
+.o-que-falam-titulo h2 span {
+    font-weight: 600;
+}
+
+.oque-falam-img-carrossel {
+    display: inline-block;
+    aspect-ratio: 16/9;
+    background-position: 50%;
+    background-size: cover;
+    border-radius: 2rem;
+    width: 33%;
+    position: relative;
+    background-color: #7489af;
+    background-blend-mode: multiply;
+}
+
+.oque-falam-img-carrossel img {
+    width: 4rem;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.img-1 {
+    background-image: url(https://i3.ytimg.com/vi/N_EZD04zmrw/hqdefault.jpg);
+}
+.img-2 {
+    background-image: url(https://i3.ytimg.com/vi/auqWeBJLJHY/hqdefault.jpg);
+}
+.img-3 {
+    background-image: url(https://i3.ytimg.com/vi/FD79IpCaM1Y/hqdefault.jpg);
+}
+
+.oque-falam-carrossel {
+    position: relative;
+}
+
+.navegacao {
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.navegacao div {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.oque-falam-carrossel-seta {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+
+.oque-falam-carrossel-seta.esquerda {
+    left: 0;
+    transform: translateY(-60%) translateX(-150%);
+}
+.oque-falam-carrossel-seta.direita {
+    right: 0;
+    transform: translateY(-60%) translateX(160%);
+}
+
+.oque-falam-carrossel-navegacao {
+    display: inline-block;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 100%;
+    background-color: #86a8bc;
+    cursor: pointer;
+}
+
+.oque-falam-carrossel-navegacao.ativo {
+    background-color: #14577f;
+}
+
+.sessao-oque-falam .botao:link,
+.sessao-oque-falam .botao:visited {
+    background-image: linear-gradient(90deg, #196c9f, #1a80a7);
+    color: #fff;
+
+    border-bottom: solid 0.6rem #14577f;
+    border-right: solid 0.6rem #14577f;
+    /* box-shadow: 0.3rem 0.25rem 0.1rem 0.2rem #14577f; */
+}
+
+.sessao-oque-falam .botao:hover,
+.sessao-oque-falam .botao:active {
+    color: rgb(148, 62, 0);
+    background: #fff;
+    border: none;
+    border-top: solid 0.3rem #fff;
+    border-bottom: solid 0.3rem #fff;
+    border-left: solid 0.3rem #fff;
+    border-right: solid 0.1rem #fff;
+    box-shadow: 0rem 0rem 0.9rem rgba(0, 0, 0, 0.64);
+}
+/* Quinta Sessão */
+.sessao-na-midia {
+    background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/BACKGROUND-Banner-05_1.png);
+    background-size: cover;
+    background-position: 50%;
+}
+
+.sessao-na-midia {
+    padding: 3rem;
+}
+
+/* .logo-seta {
+    margin-right: 2rem;
+} */
+.sessao-na-midia-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sessao-na-midia-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sessao-na-midia-div-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* .sessao-na-midia-div h2,
+.sessao-na-midia-div,
+.sessao-na-midia-div img {
+    display: inline-block;
+} */
+
+/* Sexta Sessão */
+
+.sessao-ultimos-posts {
+    padding: 7rem 5rem;
+    background-color: #f4f5f7;
+}
+.sessao-ultimos-posts-div {
+    background-color: #f9f9f9;
+    max-width: 120rem;
+    padding: 8rem 4rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sessao-ultimos-posts-div,
+.sessao-ultimos-posts-div-post {
+    border-radius: 4rem;
+    box-shadow: 0rem 0rem 0.8rem 0.1rem rgba(0, 0, 0, 0.259) inset;
+    position: relative;
+}
+
+.sessao-ultimos-posts-div-post {
+    width: 49.1%;
+    padding: 3rem;
+    display: inline-block;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+
+.sessao-ultimos-posts-div-post a:hover,
+.sessao-ultimos-posts-div-post a:active {
+    color: #fcb900;
+}
+
+.sessao-ultimos-posts-div-post img {
+    width: 100%;
+    height: auto;
+}
+.sessao-ultimos-posts-titulo {
+    background-image: linear-gradient(90deg, #feb914, #f6a50b);
+    color: #fff;
+    padding: 0.5rem 3rem;
+    display: inline-block;
+    border-radius: 1.5rem;
+    z-index: 2000;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%) translateY(-70%);
+    width: max-content;
+    rotate: -3deg;
+}
+
+figcaption.ultimos-posts {
+    font-size: 1.5rem;
+}
+
+figcaption.ultimos-posts a {
+    color: #f7a70c;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+h3.ultimos-posts a {
+    font-weight: 600;
+    font-size: 2.4rem;
+    text-decoration: none;
+}
+
+p.ultimos-posts {
+    font-size: 1.7rem;
+}
+
+/* Sétima Sessão */
+h2 span.hashtag-ajuda,
+p.hashtag-ajuda a {
+    font-weight: 600;
+}
+
+.sessao-ajuda {
+    padding: 0 0;
+}
+
+.hashtag-ajuda-inicio {
+    background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/BACKGROUND-banner-07.png);
+    background-size: cover;
+    background-position: 50%;
+}
+
+.hashtag-ajuda-container {
+    padding: 3.5rem 5rem;
+    margin: 0 auto;
+}
+
+.hashtag-ajuda-inicio h2 {
+    background-image: linear-gradient(90deg, #14a1d5, #1a8ad4);
+    display: inline-block;
+    padding: 1rem 4rem;
+    border-radius: 1.5rem;
+    color: #fff;
+}
+
+.hashtag-ajuda-texto p {
+    padding: 1rem;
+}
+
+.hashtag-ajuda-texto a:hover,
+.hashtag-ajuda-texto a:active {
+    color: blue;
+}
+
+ul.hashtag-ajuda {
+    padding: 3rem;
+    border-radius: 2.5rem;
+    width: 90rem;
+    background: #fff;
+    box-shadow: 0rem 0rem 0.8rem 0.3rem rgba(0, 0, 0, 0.225) inset;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+
+ul.hashtag-ajuda li {
+    padding-bottom: 1rem;
+}
+
+.hashtag-ajuda-div {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* ul.hashtag-ajuda li::marker {
+    content: "✓";
+} */
+
+ul.hashtag-ajuda li,
+p.hashtag-ajuda {
+    font-size: 1.9rem;
+}
+
+.hashtag-ajuda a,
+.hashtag-ajuda a {
+    color: #008ff7;
+}
+
+p.hashta-ajuda strong,
+p.hashta-ajuda b {
+    font-weight: bolder;
+}
+
+/* Oitava Sessão */
+.sessao-minicurso {
+    background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/BACKGROUND-banner-08_1.png);
+    background-position: 50%;
+    background-size: cover;
+    color: #fff;
+}
+
+.sessao-minicurso-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+}
+.sessao-minicurso-form label,
+.sessao-minicurso-form div {
+    display: inline-block;
+    font-size: 1.9rem;
+}
+
+.sessao-minicurso-container form {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 10rem;
+}
+
+.sessao-minicurso-container form div {
+    display: flex;
+    flex-flow: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 0.4rem;
+}
+
+.form-botao .botao {
+    border: none;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.4rem;
+
+    background: #ffba29;
+
+    padding: 1rem 4rem;
+    border-radius: 50rem;
+    border-bottom: solid 0.6rem #664a10;
+    border-right: solid 0.6rem #664a10;
+    /* box-shadow: 0.3rem 0.25rem 0.1rem 0.2rem #664a10; */
+}
+
+.form-botao .botao:active,
+.form-botao .botao:hover {
+    border: none;
+    border-top: solid 0.1rem #ffba29;
+    border-bottom: solid 0.3rem #ffba29;
+    border-left: solid 0.2rem #ffba29;
+    border-right: solid 0rem #ffba29;
+}
+
+.sessao-minicurso-form input,
+input {
+    display: inline-block;
+    border-radius: 1rem;
+    border: none;
+    display: inline-block;
+    padding: 1rem 4rem;
+    box-shadow: inset 0rem 0rem 0.5rem 0.1rem rgba(0, 0, 0, 0.25);
+    font-family: inherit;
+    font-size: 1.4rem;
+}
+
+label {
+    font-size: 1.4rem;
+    font-family: inherit;
+}
+input::placeholder {
+    color: #757575;
+}
+
+h3.minicurso {
+    font-size: 1.9rem;
+}
+
+h3.minicurso strong {
+    font-weight: 600;
+}
+
+/* Rodapé */
+.footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #f9f9f9;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footer-session {
+    display: inline-block;
+    width: 33%;
+}
+.footer-session img {
+    width: 18rem;
+}
+
+.footer-session.footer-img {
+    width: auto;
+}
+
+.caixa-texto-rodape {
+    width: 2.4rem;
+    height: 1.8rem;
+    display: flex;
+    gap: 1rem;
+}
+.caixa-texto-rodape a {
+    display: flex;
+}
+
+.caixa-texto-rodape a:hover svg,
+.caixa-texto-rodape a:active svg {
+    background-color: #ff6900;
+}
+
+.rodape-titulo {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 1rem 2rem;
+}
+.rodape-subtitulo {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.rodape-link {
+    color: #1a77a4;
+    font-size: 1.6rem;
+}
+
+.rodape-link:hover,
+.rodape-link:active {
+    color: #ff6900;
+}
+
+.newsletter-session .rodape-titulo {
+    font-size: 2.2rem;
+}
+
+.newsletter-session {
+    border-radius: 2rem;
+    box-shadow: 0rem 0rem 0.5rem 0.1rem rgba(0, 0, 0, 0.275) inset;
+    padding: 2rem;
+    background-color: #fff;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.newsletter-session form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-session form div div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.newsletter-session .form-botao .botao {
+    background: #1a77a4;
+    border-bottom: solid 0.6rem #0c374d;
+    border-right: solid 0.6rem #0c374d;
+    /* box-shadow: 0.3rem 0.25rem 0.1rem 0.2rem #0c374d; */
+}
+
+.newsletter-session .form-botao .botao:active,
+.newsletter-session .form-botao .botao:hover {
+    border: none;
+    border-top: solid 0.1rem #1a77a4;
+    border-bottom: solid 0.3rem #1a77a4;
+    border-left: solid 0.2rem #1a77a4;
+    border-right: solid 0rem #1a77a4;
+}
+
+.newsletter-session input {
+    margin-bottom: 2rem;
+}
+
+.whats {
+    position: fixed;
+    right: 0rem;
+    bottom: 0rem;
+    padding: 1rem;
+}
+
+.whats img {
+    height: 9rem;
+}
+
+.sombra:hover {
+    padding: 0.7rem;
+}
