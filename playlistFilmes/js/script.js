@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         e.preventDefault();
 
         try {
-            const link = `http://www.omdbapi.com/?apikey=${key}&t=${formatFilmName(
+            const link = `https://www.omdbapi.com/?apikey=${key}&t=${formatFilmName(
                 $filmName.value
             )}&y=${formatFilmYear($filmYear.value)}`;
 
