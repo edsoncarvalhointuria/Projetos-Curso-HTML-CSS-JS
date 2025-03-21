@@ -11,6 +11,7 @@ Este projeto é uma recriação da homepage da empresa Hashtag Treinamentos, des
 📌 **Acesse:**[Link do projeto]()
 
 
+
 ## 🚀 Tecnologias utilizadas
 
 * **HTML5**
