@@ -6,9 +6,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const req = await fetch(
         "https://blossom-habitual-yacht.glitch.me/get/omdbapi"
     );
-    console.log(req);
-    console.log(await req.json());
-    const key = await req.json()["key"];
+    const json = await req.json();
+    const key = await json["key"];
 
     //NavForm
     const $navForm = document.querySelector(".nav__form");
