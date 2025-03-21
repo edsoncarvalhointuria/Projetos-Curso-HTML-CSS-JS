@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         "https://blossom-habitual-yacht.glitch.me/get/omdbapi"
     );
     console.log(req);
-    console.log(req.json());
-    const key = req.json()["key"];
+    console.log(await req.json());
+    const key = await req.json()["key"];
 
     //NavForm
     const $navForm = document.querySelector(".nav__form");
