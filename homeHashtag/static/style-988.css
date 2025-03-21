@@ -1,0 +1,153 @@
+@media all and (max-width: 988px) {
+    .hero {
+        padding: 3rem 2rem;
+        & .hero-secao-container {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 3rem;
+            padding: 2rem 5rem;
+        }
+    }
+
+    header {
+        & li {
+            & a {
+                &:link,
+                &:visited {
+                    font-size: 1.1rem !important;
+                }
+            }
+        }
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .sessao-ajuda {
+        & .hashtag-ajuda-inicio {
+            & ul {
+                width: auto;
+            }
+        }
+    }
+
+    .secao {
+        padding: 5rem 2rem;
+    }
+
+    .sessao-oque-falam {
+        & .oque-falam {
+            max-width: 50rem;
+        }
+    }
+
+    .container {
+        max-width: 99%;
+    }
+
+    .sessao-ultimos-posts {
+        & .sessao-ultimos-posts-div {
+            & .sessao-ultimos-posts-div-post {
+                & figure {
+                    & figcaption {
+                        &.ultimos-posts {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+
+                & h3 {
+                    a {
+                        font-weight: 600;
+                        font-size: 2rem;
+                        text-decoration: none;
+                    }
+                }
+
+                & p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    header {
+        & li {
+            & a {
+                &:link,
+                &:visited {
+                    font-size: 0.9rem !important;
+                }
+            }
+        }
+    }
+
+    .sessao-diferenciais-inicial {
+        & .sessao-diferenciais {
+            & .sessao-diferenciais-resto {
+                & .sessao-diferenciais-resto-container {
+                    & .sessao-diferenciais-opcoes {
+                        & h3 {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+
+                & .diferenciais-empresas-session {
+                    & .diferenciais-empresas {
+                        font-size: 2.5rem;
+                    }
+
+                    & .diferenciais-empresas-session-img {
+                        & img {
+                            width: 7rem;
+                            filter: grayscale(100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+
+    .secao-cursos-gratuitos {
+        & .secao-cursos-gratuitos-container {
+            & .secao-cursos-gratuitos-imagem {
+                & .img-computer {
+                    width: 28.1rem;
+                }
+            }
+
+            & .secao-cursos-gratuitos-cursos {
+                & .secao-cursos-gratuitos-titulo {
+                    max-width: 38rem;
+                    align-self: center;
+                }
+            }
+        }
+    }
+
+    .footer {
+        & .footer-container {
+            & .footer-session {
+                & img {
+                    width: 14rem;
+                }
+            }
+
+            & .rodape-titulo {
+                font-size: 2rem;
+            }
+
+            & .rodape-subtitulo {
+                font-size: 1.6rem;
+                font-weight: 500;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
