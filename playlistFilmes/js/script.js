@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //Global
     const filmes = JSON.parse(localStorage.getItem("FILMES")) ?? {};
     let resultado;
+    require("dotenv").config();
     const key = process.env.key;
 
     //NavForm
