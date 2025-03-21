@@ -6,7 +6,7 @@ Este projeto é uma homepage fictícia para uma pizzaria chamada **PizzaHash**, 
 
 > 🔍 **Observação:** Este projeto não tem fins comerciais.
 
-📌 **Acesse:**[Link do projeto]()
+📌 **Acesse:**[Link do projeto](https://bright-bombolone-024860.netlify.app/)
 
 ## 🚀 Tecnologias utilizadas
 
