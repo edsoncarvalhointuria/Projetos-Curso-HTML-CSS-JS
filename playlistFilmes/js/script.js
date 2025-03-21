@@ -1,11 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     //Global
     const filmes = JSON.parse(localStorage.getItem("FILMES")) ?? {};
     let resultado;
 
-    console.log(import.meta.env);
-
-    const key = import.meta.env.VITE_KEY;
+    const req = await fetch(
+        "https://aromatic-winter-origami.glitch.me/get/omdbapi"
+    );
+    console.log(req);
+    console.log(req.json());
+    const key = req.json()["key"];
 
     //NavForm
     const $navForm = document.querySelector(".nav__form");
