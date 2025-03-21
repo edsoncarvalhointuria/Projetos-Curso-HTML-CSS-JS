@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     //Global
     const filmes = JSON.parse(localStorage.getItem("FILMES")) ?? {};
     let resultado;
-    require("dotenv").config();
-    const key = process.env.key;
+
+    const key = import.meta.env.VITE_KEY;
 
     //NavForm
     const $navForm = document.querySelector(".nav__form");
