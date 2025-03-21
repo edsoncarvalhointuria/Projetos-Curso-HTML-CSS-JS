@@ -1,0 +1,404 @@
+$laranja: #e97b30;
+$azul-escuro: #1f2749;
+$azul-claro: #27346a;
+$cinza-escuro: #51535c;
+$cinza-claro: #434343;
+$borda-form: 1px solid #435374;
+$verde: #4baf4f;
+
+@mixin respond($tamanho) {
+    @if ($tamanho == big) {
+        @media all and (max-width: 61.9375em) {
+            @content;
+        }
+    } @else if($tamanho == small) {
+        @media all and (max-width: 30em) {
+            @content;
+        }
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+img,
+svg,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @include respond(small) {
+        font-size: 56.25%;
+    }
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input {
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid $cinza-escuro;
+    background-color: $cinza-claro;
+    color: white;
+    padding-top: 2rem;
+
+    &:focus {
+        outline: none;
+        border-color: $laranja;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        appearance: none;
+    }
+
+    &.erro {
+        box-shadow: 0 0 0.8rem 0.8rem rgba(255, 0, 0, 0.2);
+    }
+}
+
+.body,
+.main {
+    display: grid;
+    grid-template-columns: [total-start]2rem [centro-start cesquerda-start] 1.5fr [cdireita-start cesquerda-end] 1fr[centro-end cdireita-end] 2rem[total-end];
+    background-color: $azul-escuro;
+
+    & > * {
+        grid-column: centro;
+    }
+}
+
+.header {
+    justify-self: center;
+
+    &__image {
+        padding: 1rem;
+    }
+}
+
+.main {
+    grid-column: total;
+    gap: 1rem;
+}
+
+.dados {
+    background-color: $azul-claro;
+    border-radius: 0.5rem;
+    padding: 5rem;
+    display: flex;
+    flex-flow: column;
+    gap: 3rem;
+    grid-column: cesquerda;
+
+    @include respond(big) {
+        grid-column: centro;
+    }
+
+    @include respond(small) {
+        padding: 2rem;
+    }
+
+    &__infos {
+        display: flex;
+        flex-flow: column;
+        gap: 1.5rem;
+    }
+
+    &__titulo {
+        display: flex;
+        gap: 0.7rem;
+        color: $laranja;
+        align-items: center;
+
+        &--tamanho {
+            font-size: 2rem;
+        }
+    }
+
+    &__p {
+        color: white;
+    }
+
+    &__form {
+        display: grid;
+        gap: 3rem;
+
+        &-titulo {
+            color: $laranja;
+            font-weight: 700;
+            position: absolute;
+            top: 0;
+            left: 2rem;
+            padding: 0 0.3rem;
+            transform: translateY(-50%);
+            background-color: $azul-claro;
+        }
+
+        &-input {
+            display: flex;
+            flex-flow: column;
+            position: relative;
+
+            & label {
+                position: absolute;
+                font-size: 1.4rem;
+                top: 50%;
+                left: 1rem;
+                padding: 0 0.2rem;
+                transform: translateY(-50%);
+                color: white;
+                transition: all 0.5s ease;
+            }
+
+            &:has(input:not(:placeholder-shown)),
+            &:has(input:focus) {
+                & label {
+                    top: 0;
+                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 1.1rem;
+                    transform: translateY(50%);
+                }
+            }
+        }
+    }
+
+    &__pessoais,
+    &__endereco {
+        padding: 2rem;
+        position: relative;
+        border-radius: 1rem;
+        border: $borda-form;
+
+        display: grid;
+        gap: 2rem;
+    }
+
+    &__botao {
+        padding: 1.3rem;
+        background: $verde;
+        text-transform: uppercase;
+        color: white;
+        border: $borda-form;
+        border-radius: 0.8rem;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover {
+            background: darken($verde, 10%);
+            color: darken(white, 30%);
+        }
+    }
+}
+
+.resumo {
+    background-color: $azul-claro;
+    border-radius: 0.5rem;
+    padding: 5rem;
+    display: flex;
+    flex-flow: column;
+    gap: 3rem;
+    grid-column: cdireita;
+
+    @include respond(big) {
+        grid-column: centro;
+    }
+
+    @include respond(small) {
+        padding: 2rem;
+    }
+
+    &__titulo {
+        display: flex;
+        gap: 0.7rem;
+        color: $laranja;
+        align-items: center;
+
+        &--tamanho {
+            font-size: 2rem;
+        }
+    }
+
+    &__div {
+        padding-bottom: 3rem;
+        display: flex;
+        flex-flow: column;
+        gap: 1.5rem;
+        color: white;
+
+        border-bottom: $borda-form;
+
+        &-titulo {
+            font-weight: 700;
+            color: $laranja;
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    &__cupom {
+        display: flex;
+        flex-flow: column;
+        gap: 1rem;
+
+        &--abrir {
+            & .resumo__cupom-titulo {
+                &::after {
+                    transform: rotate(0deg);
+                }
+            }
+
+            & form {
+                height: auto;
+            }
+        }
+
+        &-aplicado {
+            &::after {
+                content: "Cupom Aplicado!";
+                color: $verde;
+                display: block;
+            }
+        }
+
+        &-invalido {
+            &::after {
+                content: "Cupom Invalido.";
+                color: red;
+                display: block;
+            }
+        }
+
+        &-titulo {
+            font-size: 1.4rem;
+            color: $laranja;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+
+            &::after {
+                transition: transform 0.5s ease;
+                content: "";
+                display: block;
+                height: 2rem;
+                width: 2rem;
+                background-image: url("https://www.svgrepo.com/show/521486/arrow-up.svg");
+                background-position: center;
+                background-size: cover;
+                transform: rotate(180deg);
+                filter: invert(1);
+            }
+        }
+
+        &-botao {
+            color: white;
+            padding: 1rem;
+            border-radius: 1rem;
+            background: $laranja;
+            border: $borda-form;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            min-width: max-content;
+
+            &:hover {
+                background: darken($laranja, 10%);
+                color: darken(white, 30%);
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+        interpolate-size: allow-keywords;
+
+        & div {
+            width: 100%;
+        }
+    }
+
+    &__cartoes {
+        margin-top: 2rem;
+        align-self: center;
+        width: 50%;
+    }
+
+    &__seg {
+        display: flex;
+        flex-flow: column;
+        gap: 3.5rem;
+
+        &-p {
+            line-height: 1.4;
+        }
+
+        &-div {
+            display: flex;
+            gap: 1rem;
+            font-weight: 700;
+            align-items: center;
+            justify-content: center;
+            color: $verde;
+        }
+
+        &-img {
+            & img {
+                border-radius: 1rem;
+            }
+        }
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    color: $laranja;
+
+    & a {
+        &:first-child {
+            padding-right: 1rem;
+            border-right: 1px solid white;
+            @include respond(small) {
+                border-right: none;
+            }
+        }
+
+        &:last-child {
+            padding-left: 1rem;
+        }
+
+        @include respond(small) {
+            white-space: nowrap;
+        }
+    }
+}

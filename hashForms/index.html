@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HashForms</title>
+
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body class="body">
+        <header class="header">
+            <a href="#" class="header__image">
+                <img
+                    src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fa6d41686876ceccfc436dd310b9e49aa.cdn.bubble.io%2Fd219%2Ff1723121793047x871980606331503000%2Foie_transparent.png?w=32&amp;h=45&amp;auto=compress&amp;dpr=1&amp;fit=max"
+                    alt="Logo da hashtag"
+                />
+            </a>
+        </header>
+
+        <main class="main">
+            <section class="dados">
+                <div class="dados__infos">
+                    <div class="dados__titulo">
+                        <i
+                            class="fa-regular fa-circle-user dados__titulo--tamanho"
+                        ></i>
+                        <h1 class="dados__h1">Meus Dados</h1>
+                    </div>
+
+                    <div>
+                        <p class="dados__p">
+                            Confirme seus dados. Eles aparecerão em sua nota
+                            fiscal.
+                        </p>
+                    </div>
+                </div>
+
+                <form class="dados__form" action="">
+                    <div class="dados__pessoais">
+                        <p class="dados__form-titulo">Dados pessoais</p>
+                        <div class="dados__form-input">
+                            <label for="name">*Nome: </label>
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder="  "
+                            />
+                        </div>
+
+                        <div class="dados__form-input">
+                            <label for="cpf">*CPF: </label>
+                            <input
+                                type="number"
+                                name="cpf"
+                                id="cpf"
+                                placeholder="  "
+                            />
+                        </div>
+
+                        <div class="dados__form-input">
+                            <label for="tel">*Telefone: </label>
+                            <input
+                                type="tel"
+                                name="tel"
+                                id="tel"
+                                placeholder="  "
+                            />
+                        </div>
+                    </div>
+
+                    <div class="dados__endereco">
+                        <p class="dados__form-titulo">Endereço</p>
+                        <div class="dados__form-input">
+                            <label for="cep">*CEP: </label>
+                            <input
+                                type="number"
+                                name="cep"
+                                id="cep"
+                                placeholder="  "
+                            />
+                        </div>
+
+                        <div class="dados__form-input">
+                            <label for="address">*Rua: </label>
+                            <input
+                                type="text"
+                                name="address"
+                                id="address"
+                                placeholder="  "
+                            />
+                        </div>
+
+                        <div class="dados__form-input">
+                            <label for="nAddress">*Número: </label>
+                            <input
+                                type="number"
+                                name="nAddress"
+                                id="nAddress"
+                                placeholder="  "
+                            />
+                        </div>
+
+                        <div class="dados__form-input">
+                            <label for="comp">Complemento: </label>
+                            <input
+                                type="text"
+                                name="comp"
+                                id="comp"
+                                placeholder="  "
+                            />
+                        </div>
+
+                        <div class="dados__form-input">
+                            <label for="neighborhood">*Bairro: </label>
+                            <input
+                                type="text"
+                                name="neighborhood"
+                                id="neighborhood"
+                                placeholder="  "
+                            />
+                        </div>
+
+                        <div class="dados__form-input">
+                            <label for="city">*Cidade: </label>
+                            <input
+                                type="text"
+                                name="city"
+                                id="city"
+                                placeholder="  "
+                            />
+                        </div>
+
+                        <div class="dados__form-input">
+                            <label for="state">*Estado: </label>
+                            <input
+                                type="text"
+                                name="state"
+                                id="state"
+                                placeholder="  "
+                            />
+                        </div>
+                    </div>
+
+                    <button class="dados__botao" type="submit">Avançar</button>
+                </form>
+            </section>
+
+            <section class="resumo">
+                <div class="resumo__titulo">
+                    <i
+                        class="fa-regular fa-newspaper resumo__titulo--tamanho"
+                    ></i>
+                    <h2 class="resumo__h2">Resumo</h2>
+                </div>
+
+                <div class="resumo__div">
+                    <p>Black Friday - Lote 01: R$ 1.200,00</p>
+                    <p>Total: 12x 100,00 ou 1.200,00 à vista</p>
+                </div>
+
+                <div class="resumo__div">
+                    <div class="resumo__cupom resumo__cupom--abrir">
+                        <p class="resumo__cupom-titulo">
+                            Aplicar cupom de desconto
+                        </p>
+
+                        <form class="resumo__form" action="">
+                            <div class="dados__form-input">
+                                <label for="cupom">Digite o código</label>
+                                <input
+                                    type="text"
+                                    name="cupom"
+                                    id="cupom"
+                                    placeholder="  "
+                                />
+                            </div>
+
+                            <button type="submit" class="resumo__cupom-botao">
+                                Aplicar
+                            </button>
+                        </form>
+                    </div>
+
+                    <p class="resumo__preco-total">
+                        Preço Total: R$
+                        <span class="resumo__preco-span">1.200,50</span>
+                    </p>
+
+                    <div class="resumo__cartoes">
+                        <img
+                            src="https://www.mundodeled.com.br/image/catalog/banco%20do%20brasil/bandeiras_cartoes.png"
+                            alt="Bandeiras de Cartão"
+                        />
+                    </div>
+                </div>
+
+                <div class="resumo__div">
+                    <p class="resumo__div-titulo">
+                        Você tem 15 dias de garantia
+                    </p>
+
+                    <div class="resumo__seg">
+                        <p class="resumo__seg-p">
+                            Experimente! Se não gostar ou ver que não é para
+                            você, devolvemos o seu dinheiro! Sem letras miúdas.
+                        </p>
+
+                        <div class="resumo__seg-div">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <p>Suas informações estão seguras</p>
+                        </div>
+
+                        <div class="resumo__seg-img">
+                            <img
+                                src="./images/safe.jpg"
+                                alt="Imagem de Segurança"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <a href="#"> Termos de Uso </a>
+
+            <a href="#">Política de Privacidade</a>
+        </footer>
+
+        <script
+            src="https://kit.fontawesome.com/b76cd40de3.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
