@@ -6,7 +6,7 @@ Este projeto é uma página de captura para as inscrições do evento **Python I
 
 > 🔍 **Observação:** Este projeto não tem fins comerciais.
 
-📌 **Acesse:**[Link do projeto]()
+📌 **Acesse:**[Link do projeto](https://gentle-capybara-19d854.netlify.app/)
 
 ## 🚀 Tecnologias utilizadas
 
