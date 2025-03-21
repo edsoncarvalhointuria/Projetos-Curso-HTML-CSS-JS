@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     let resultado;
 
     const req = await fetch(
-        "https://aromatic-winter-origami.glitch.me/get/omdbapi"
+        "https://blossom-habitual-yacht.glitch.me/get/omdbapi"
     );
     console.log(req);
     console.log(req.json());
