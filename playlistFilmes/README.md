@@ -8,7 +8,7 @@ O **Playlist de Filmes** é um projeto desenvolvido no curso de **JavaScript**, 
 
 > 🔍 **Observação:** Este projeto não tem fins comerciais.
 
-📌 **Acesse:**[Link do projeto]()*(substitua pelo link real)*
+📌 **Acesse:**[Link do projeto](https://playlistfilmes.netlify.app/)
 
 ## 🛠 Funcionalidades
 
