@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         try {
             const link = `https://blossom-habitual-yacht.glitch.me/get/omdbapi/${formatFilmName(
                 $filmName.value
-            )}/${formatFilmYear($filmYear.value)}`;
+            )}/${formatFilmYear($filmYear.value) || ""}`;
 
             const request = await fetch(link);
             const json = await request.json();
