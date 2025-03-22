@@ -1,4 +1,0 @@
-API REQUEST: OMDB
-Icons: Bootstrap Icons ou Box Icons
-API js: notie js
-site cores: colors.co
