@@ -8,6 +8,8 @@ O **HashForms** é um projeto desenvolvido no curso de **JavaScript**, represent
 
 📌 **Acesse:**[Link do projeto](https://cerulean-puffpuff-3157f8.netlify.app/)
 
+---
+
 ## 🛠 Funcionalidades
 
 -   **Validação de dados:** Restrições nos campos de entrada, como impedir letras em campos numéricos.
@@ -16,12 +18,16 @@ O **HashForms** é um projeto desenvolvido no curso de **JavaScript**, represent
     -   `DESCONTO10`: desconto de 10%
     -   `NUSER15`: desconto de 15%
 
+---
+
 ## 🚀 Tecnologias utilizadas
 
 -   **HTML5**
 -   **CSS3**
 -   **SASS**
 -   **JavaScript** (EventListeners e manipulação de DOM)
+
+---
 
 ## 💌 Contato
 

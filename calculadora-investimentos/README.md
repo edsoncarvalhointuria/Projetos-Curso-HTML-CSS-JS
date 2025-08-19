@@ -8,12 +8,16 @@ A **Calculadora de Investimentos** é um projeto desenvolvido no curso de **Java
 
 📌 **Acesse:**[Link do projeto](https://fancy-kitsune-8c51a5.netlify.app/)
 
+---
+
 ## 🛠 Funcionalidades
 
 -   **Inputs para simulação**: investimento inicial, aportes, prazo, rentabilidade e imposto.
 -   **Gráficos interativos** gerados com **Chart.js**.
 -   **Tabela detalhada** com o desempenho do investimento ao longo do tempo.
 -   **Cálculos automáticos** com base nos valores informados pelo usuário.
+
+---
 
 ## 🚀 Tecnologias utilizadas
 
@@ -22,6 +26,8 @@ A **Calculadora de Investimentos** é um projeto desenvolvido no curso de **Java
 -   **SASS**
 -   **JavaScript (ES6+)**
 -   **Chart.js**
+
+---
 
 ## 💌 Contato
 

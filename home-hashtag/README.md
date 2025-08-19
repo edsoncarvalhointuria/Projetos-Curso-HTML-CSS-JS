@@ -6,17 +6,17 @@ Este projeto é uma recriação da homepage da empresa Hashtag Treinamentos, des
 
 > 🔍 **Observação:** Este projeto não tem fins comerciais.
 
-
-
 📌 **Acesse:**[Link do projeto](https://monumental-blancmange-f41380.netlify.app/)
 
-
+---
 
 ## 🚀 Tecnologias utilizadas
 
-* **HTML5**
-* **CSS3**
-* **Responsividade e otimização para diferentes dispositivos**
+-   **HTML5**
+-   **CSS3**
+-   **Responsividade e otimização para diferentes dispositivos**
+
+---
 
 ## 💌 Contato
 

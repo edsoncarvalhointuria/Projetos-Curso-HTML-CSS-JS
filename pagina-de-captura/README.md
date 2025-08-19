@@ -8,12 +8,16 @@ Este projeto é uma página de captura para as inscrições do evento **Python I
 
 📌 **Acesse:**[Link do projeto](https://gentle-capybara-19d854.netlify.app/)
 
+---
+
 ## 🚀 Tecnologias utilizadas
 
 -   **HTML5**
 -   **CSS3**
 -   **SASS**
 -   **Design responsivo e otimizado**
+
+---
 
 ## 💌 Contato
 

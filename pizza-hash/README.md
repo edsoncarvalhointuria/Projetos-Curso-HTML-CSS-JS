@@ -8,12 +8,16 @@ Este projeto é uma homepage fictícia para uma pizzaria chamada **PizzaHash**, 
 
 📌 **Acesse:**[Link do projeto](https://bright-bombolone-024860.netlify.app/)
 
+---
+
 ## 🚀 Tecnologias utilizadas
 
 -   **HTML5**
 -   **CSS3**
 -   **SASS**
 -   **Design responsivo e otimizado**
+
+---
 
 ## 💌 Contato
 

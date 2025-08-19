@@ -1,5 +1,3 @@
-
-
 # 🎬 Playlist de Filmes
 
 ## ✨ Sobre
@@ -10,21 +8,27 @@ O **Playlist de Filmes** é um projeto desenvolvido no curso de **JavaScript**, 
 
 📌 **Acesse:**[Link do projeto](https://playlistfilmes.netlify.app/)
 
+---
+
 ## 🛠 Funcionalidades
 
-* **Busca de filmes** utilizando a API **OMDb**.
-* **Armazenamento local** dos filmes adicionados pelo usuário via **localStorage**.
-* **Interface interativa** para adicionar e remover filmes da lista.
-* **Requisições assíncronas** feitas com **fetch API**.
+-   **Busca de filmes** utilizando a API **OMDb**.
+-   **Armazenamento local** dos filmes adicionados pelo usuário via **localStorage**.
+-   **Interface interativa** para adicionar e remover filmes da lista.
+-   **Requisições assíncronas** feitas com **fetch API**.
+
+---
 
 ## 🚀 Tecnologias utilizadas
 
-* **HTML5**
-* **CSS3**
-* **SASS**
-* **JavaScript (ES6+)**
-* **Fetch API**
-* **LocalStorage**
+-   **HTML5**
+-   **CSS3**
+-   **SASS**
+-   **JavaScript (ES6+)**
+-   **Fetch API**
+-   **LocalStorage**
+
+---
 
 ## 💌 Contato
 

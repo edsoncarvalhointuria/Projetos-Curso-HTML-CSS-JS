@@ -1,12 +1,12 @@
-# 📝 Página de Captura - Lista de Espera
+# 📈 Ecommerce
 
 ## ✨ Sobre
 
-Este projeto é uma página de captura desenvolvida com Bootstrap, criada como parte do curso de HTML e CSS. A página simula uma lista de espera para o curso de Python da Hashtag Treinamentos.
+Este projeto é uma reprodução estática inspirada no site da **Reserva**, desenvolvida como parte do curso de HTML e CSS. O foco foi trabalhar o frontend, utilizando **Sass** para organizar e otimizar os estilos.
 
 > 🔍 **Observação:** Este projeto não tem fins comerciais.
 
-📌 **Acesse:**[Link do projeto](https://extraordinary-naiad-204a32.netlify.app/)
+📌 **Acesse:**[Link do projeto]()
 
 ---
 
@@ -14,8 +14,8 @@ Este projeto é uma página de captura desenvolvida com Bootstrap, criada como p
 
 -   **HTML5**
 -   **CSS3**
--   **Bootstrap**
--   **Design responsivo**
+-   **SASS**
+-   **JavaScript (ES6+)**
 
 ---
 
