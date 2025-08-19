@@ -1,0 +1,60 @@
+.hero-mob {
+    display: none;
+    @include respond(mini) {
+        display: block;
+        &__container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        &__linhas {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        &__linha {
+            height: 2px;
+            width: 25%;
+            border-radius: 5rem;
+            position: relative;
+            background-color: $cor-cinza;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                height: 2px;
+                transition: width ease-in 2s;
+                width: 2%;
+                background-color: $cor-cinza-claro;
+            }
+
+            &.proximo {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__carrossel {
+            display: flex;
+            transition: transform ease-in-out 2s;
+        }
+
+        &__imagem {
+            min-width: 100%;
+
+            & img {
+                width: 100%;
+            }
+        }
+    }
+}

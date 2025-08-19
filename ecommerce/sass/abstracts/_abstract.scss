@@ -1,0 +1,89 @@
+// Variaveis
+$cor-cinza: #585858;
+$cor-cinza-mais-claro: #9d9d9d;
+$cor-cinza-claro: #c2c2c2;
+$cor-outro-cinza: #8a8c8e;
+$bege: #ededed;
+$verde: #38ab6b;
+$tamanho-carrossel: 11.2rem;
+
+// Mixins
+@mixin flex(
+    $flow: column,
+    $wrap: nowrap,
+    $j-content: center,
+    $a-items: center,
+    $gap: 0
+) {
+    display: flex;
+    flex-flow: $flow $wrap;
+    justify-content: $j-content;
+    align-items: $a-items;
+    gap: $gap;
+}
+
+@mixin grid(
+    $flow: row,
+    $j-content: center,
+    $j-items: center,
+    $a-content: center,
+    $a-items: center,
+    $gap: 0
+) {
+    display: grid;
+    grid-auto-flow: $flow;
+    justify-content: $j-content;
+    justify-items: $j-items;
+    align-content: $a-content;
+    align-items: $a-items;
+    gap: $gap;
+}
+
+@mixin respond($tamanho) {
+    @if $tamanho == big {
+        @media all and (max-width: 77.5em) {
+            @content;
+        }
+    } @else if $tamanho == big-small {
+        @media all and (max-width: 68.125em) {
+            @content;
+        }
+    } @else if $tamanho == medium {
+        @media all and (max-width: 61.9375em) {
+            @content;
+        }
+    } @else if $tamanho == small {
+        @media all and (max-width: 47.9375em) {
+            @content;
+        }
+    } @else if $tamanho == mini {
+        @media all and (max-width: 30em) {
+            @content;
+        }
+    } @else if $tamanho == small-mini {
+        @media all and (max-width: 35.9375em) {
+            @content;
+        }
+    } @else if $tamanho == mini-small {
+        @media all and (max-width: 25.625em) {
+            @content;
+        }
+    }
+}
+
+%btn {
+    text-transform: uppercase;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    background: $verde;
+    width: 100%;
+    cursor: pointer;
+    transition: all ease-out 0.3s;
+    margin: 2rem 0;
+
+    &:hover {
+        background-color: darken($verde, 15%);
+    }
+}

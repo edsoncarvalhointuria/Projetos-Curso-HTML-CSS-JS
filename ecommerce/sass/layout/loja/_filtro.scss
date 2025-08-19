@@ -1,0 +1,296 @@
+.filtro {
+    max-height: 61rem;
+    min-width: 26rem;
+    width: 26rem;
+    overflow: auto;
+    padding: 2rem;
+    position: sticky;
+    top: 6.7rem;
+
+    &__container {
+        @include flex($a-items: start, $gap: 2rem);
+    }
+
+    &__titulo {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        max-width: 20.7rem;
+        gap: 1rem;
+        height: 4rem;
+
+        font-weight: 600;
+        font-size: 2.3rem;
+        font-family: "Times New Roman", Times, serif;
+
+        &-fechar {
+            display: none;
+        }
+    }
+
+    &__img {
+        height: 2.2rem;
+        img {
+            height: 100%;
+        }
+    }
+
+    &__p {
+        font-weight: 600;
+    }
+
+    &__tipos {
+        width: 100%;
+    }
+
+    &__tipo {
+        border-top: solid 0.1rem rgba(115, 109, 109, 0.3);
+
+        &:last-child {
+            border-bottom: solid 0.1rem rgba(115, 109, 109, 0.3);
+        }
+
+        &.abrir {
+            & .filtro__lista {
+                padding-bottom: 2rem;
+                max-height: 100rem;
+            }
+
+            & .filtro__tipo-titulo {
+                &::after {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+
+        &-titulo {
+            @include flex($flow: row, $j-content: space-between);
+            cursor: pointer;
+            font-weight: 700;
+            padding: 3rem 0.2rem;
+
+            &::after {
+                content: "";
+                display: block;
+                background-image: url("../images/right-arrow-svgrepo-com.svg");
+                background-position: 50%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 1.3rem;
+                width: 1.3rem;
+                transform: rotate(90deg);
+                transition: transform linear 0.1s;
+            }
+        }
+    }
+
+    &__lista {
+        list-style: none;
+        // border-bottom: solid 0.1rem rgba(115, 109, 109, 0.3);
+        transition: max-height ease-in-out 0.4s, padding ease-out 0.4s;
+        overflow: hidden;
+        max-height: 0;
+        padding-bottom: 0rem;
+
+        & li {
+            @include flex($flow: row, $j-content: left, $gap: 0.5rem);
+            cursor: pointer;
+        }
+
+        &-cor,
+        & input {
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 0.4rem;
+        }
+
+        &--cor {
+            @include grid($j-items: left, $gap: 1rem);
+            grid-template-columns: 1fr 1fr;
+
+            li {
+                position: relative;
+            }
+
+            & input {
+                width: 100%;
+                position: absolute;
+                cursor: pointer;
+                opacity: 0;
+            }
+
+            & input:checked + div {
+                border: solid 0.3rem rgb(67, 60, 60);
+            }
+        }
+
+        &-cor {
+            border: solid 0.02rem $cor-cinza;
+
+            &--amarelo {
+                background-color: yellow;
+            }
+            &--azul {
+                background-color: blue;
+            }
+            &--branco {
+                background-color: white;
+            }
+            &--cinza {
+                background-color: gray;
+            }
+            &--preto {
+                background-color: black;
+            }
+            &--rosa {
+                background-color: pink;
+            }
+        }
+
+        &--tamanho {
+            @include grid($j-items: left, $gap: 1rem);
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        &-tamanho {
+            position: relative;
+            & div,
+            & input {
+                height: 2.5rem;
+                width: 2.5rem;
+                border-radius: 0.4rem;
+            }
+
+            & div {
+                @include flex();
+                border: solid 0.02rem black;
+                font-size: 1.2rem;
+            }
+
+            & input {
+                cursor: pointer;
+                position: absolute;
+                opacity: 0;
+            }
+
+            & input:checked + div {
+                background-color: black;
+                color: white;
+            }
+        }
+
+        &--categoria {
+            @include flex($a-items: start, $gap: 1rem);
+        }
+
+        &-categoria {
+            position: relative;
+            & div,
+            & input {
+                height: 2.5rem;
+                width: 2.5rem;
+                border-radius: 0.4rem;
+                border: solid 0.02rem black;
+            }
+
+            & input {
+                width: 100%;
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+
+            & input:checked + div {
+                background-color: black;
+            }
+        }
+    }
+}
+
+@include respond(small) {
+    .filtro {
+        position: fixed;
+        background-color: white;
+        z-index: 20;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        max-height: 100vh;
+        padding: 3rem;
+        transform: translate(110%, 0);
+        transition: transform ease-out 0.5s;
+
+        &__titulo {
+            &-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+
+            &-fechar {
+                display: block;
+                background-image: url("../images/close-circle-svgrepo-com.svg");
+                background-position: 50%;
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 3rem;
+                width: 3rem;
+                cursor: pointer;
+                transition: transform ease-in 0.3s;
+
+                &:hover,
+                &:active {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        & .form_control {
+            gap: 2rem;
+            justify-content: flex-start;
+        }
+
+        &__lista-cor,
+        &__lista input {
+            height: 3.5rem;
+        }
+
+        &__lista-cor {
+            height: 3.5rem;
+            width: 3.5rem;
+        }
+
+        &__lista-tamanho div,
+        &__lista-tamanho input {
+            height: 3.5rem;
+            width: 3.5rem;
+            font-size: 1.5rem;
+        }
+
+        &__lista-categoria div {
+            width: 3.5rem;
+        }
+
+        &__lista-categoria div,
+        &__lista-categoria input {
+            height: 3.5rem;
+        }
+    }
+
+    .filtro-aberto {
+        overflow-y: hidden;
+
+        & .filtro {
+            transform: translate(0%, 0);
+        }
+    }
+}
+
+@include respond(mini) {
+    .filtro .form_control {
+        justify-content: center;
+    }
+}

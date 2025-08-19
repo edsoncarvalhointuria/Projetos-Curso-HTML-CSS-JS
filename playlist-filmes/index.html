@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Playslist Filmes</title>
+
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./notie-master/dist/notie.css" />
+    </head>
+
+    <body class="">
+        <header class="header">
+            <div class="header__titulo">
+                <i class="bx bx-film"></i>
+                <h2>Meus Filmes</h2>
+            </div>
+
+            <nav class="nav">
+                <form class="nav__form" action="">
+                    <div>
+                        <label for="filme">Nome:</label>
+                        <input type="text" name="filme" id="filme" />
+                    </div>
+
+                    <div>
+                        <label for="ano">Ano:</label>
+                        <input type="number" name="ano" id="ano" />
+                    </div>
+
+                    <button type="submit">
+                        <i class="bx bx-search-alt-2"></i>
+                    </button>
+                </form>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1>Comece agora a sua lista de filmes!</h1>
+
+                <div class="hero__filmes"></div>
+            </section>
+
+            <article class="newFilme">
+                <div class="newFilme__fechar"></div>
+                <div class="newFilme__dados">
+                    <h2 class="newFilme__titulo">Nome Do Filme</h2>
+                    <div class="newFilme__container">
+                        <div class="newFilme__img">
+                            <img
+                                src="./images/Ratatouille.webp"
+                                alt="Imagem de um Filme"
+                            />
+                        </div>
+
+                        <div class="newFilme__infos">
+                            <div class="newFilme__descricao newFilme--destaque">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Officia quae nesciunt ipsam
+                                ipsum quas, possimus labore voluptatum
+                                obcaecati! Natus est, qui facilis fugiat tempore
+                                temporibus molestiae magni quasi nesciunt
+                                laboriosam.
+                            </div>
+
+                            <div class="newFilme__elenco">
+                                <p>
+                                    <span class="newFilme--destaque"
+                                        >Elenco:
+                                    </span>
+                                    <span class="newFilme--info"
+                                        >Ator1, Ator2, Ator3</span
+                                    >
+                                </p>
+                            </div>
+
+                            <div class="newFilme__genero">
+                                <p>
+                                    <span class="newFilme--destaque"
+                                        >Gênero:</span
+                                    >
+                                    <span class="newFilme--info">Feminino</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="newFilme__botao btn">
+                        <p>Adicionar Filme!</p>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <script type="module" src="./js/script.js"></script>
+        <script src="./notie-master/dist/notie.js"></script>
+    </body>
+</html>

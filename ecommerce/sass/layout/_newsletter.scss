@@ -1,0 +1,118 @@
+.newsletter {
+    // margin: 5rem 0;
+    background-color: $bege;
+    @include flex();
+
+    &__container {
+        padding: 4rem 0rem;
+        @include flex($flow: row, $gap: 8rem, $wrap: nowrap);
+
+        @include respond(medium) {
+            padding: 3rem 1rem;
+        }
+
+        @include respond(small) {
+            gap: 2rem;
+            padding: 3rem 1rem;
+            flex-wrap: wrap;
+        }
+
+        & span {
+            font-family: Impact, Haettenschweiler, "Arial Narrow Bold",
+                sans-serif;
+            font-weight: 700;
+            font-size: 3.2rem;
+            line-height: 1.6;
+            white-space: nowrap;
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__form {
+        @include flex($gap: 1rem, $a-items: start);
+        max-width: 65rem;
+
+        &-titulo-container {
+            @include flex($flow: row, $gap: 1.5rem);
+
+            @include respond(medium) {
+                flex-flow: column wrap;
+            }
+
+            @include respond(mini) {
+                text-align: center;
+            }
+        }
+
+        &-titulo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        & img {
+            width: 2rem;
+        }
+
+        &-formulario {
+            display: flex;
+            gap: 1rem;
+            width: 100%;
+
+            @include respond(medium) {
+                flex-flow: column;
+            }
+        }
+        &-input {
+            padding: 1.1rem 3rem;
+            padding-left: 2rem;
+            border-radius: 0.7rem;
+            border: 0.15rem solid $cor-cinza-claro;
+            font-size: 1.4rem;
+            width: 100%;
+        }
+
+        &-botao {
+            color: white;
+            background: black;
+            border: none;
+            padding: 1.1rem 2rem;
+            border-radius: 0.7rem;
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+    }
+
+    &__app {
+        @include flex($gap: 1rem, $a-items: start);
+        max-width: 50rem;
+
+        @include respond(medium) {
+            align-items: center;
+            max-width: 30rem;
+            order: -1;
+        }
+
+        &-titulo {
+            @include flex($flow: row, $gap: 1rem);
+
+            @include respond(medium) {
+                flex-flow: column;
+            }
+        }
+
+        &-imagens {
+            @include flex($flow: row, $gap: 1rem);
+
+            & a {
+                text-decoration: none;
+            }
+            & img {
+                height: 4.2rem;
+            }
+        }
+    }
+}

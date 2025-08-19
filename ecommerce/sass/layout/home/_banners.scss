@@ -1,0 +1,21 @@
+.banners {
+    @include flex();
+
+    &__container {
+        @include grid($gap: 1rem);
+        row-gap: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+        max-width: 200rem;
+
+        @include respond(mini) {
+            grid-template-columns: 1fr;
+            padding: 2rem;
+        }
+
+        img {
+            aspect-ratio: 661.2/514.26;
+            width: 100%;
+            display: block;
+        }
+    }
+}

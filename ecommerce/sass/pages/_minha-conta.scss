@@ -1,0 +1,93 @@
+.conta {
+    background-color: #f2f2f2;
+    padding: 4.5rem 3rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 2rem;
+
+    @include respond(small) {
+        padding: 4.5rem 2rem;
+    }
+
+    &__container {
+        width: 80%;
+        max-width: 120rem;
+        padding: 4rem 4rem;
+        background-color: white;
+
+        display: flex;
+        flex-flow: column;
+        gap: 3rem;
+
+        @include respond(small) {
+            width: 100%;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-flow: column;
+        gap: 2rem;
+        background-color: #f2f2f2;
+        padding: 3rem;
+        border-radius: 1rem;
+    }
+
+    &-h1 {
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 1;
+        margin: 0;
+        font-family: serif;
+    }
+
+    &__inputs {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 2rem;
+
+        & div {
+            font-size: 1.3rem;
+            position: relative;
+        }
+    }
+
+    &__input {
+        min-width: calc(50% - 1rem);
+
+        @include respond(mini) {
+            min-width: 100%;
+        }
+        & input {
+            width: 100%;
+            padding: 1.3rem 1rem;
+            border: 1px solid $cor-cinza-claro;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+
+            &:focus-visible {
+                outline: none;
+            }
+        }
+
+        & label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(10px, -50%);
+            background-color: #f2f2f2;
+            padding: 0 0.2rem;
+        }
+
+        &--email {
+            width: 100%;
+        }
+    }
+}
+
+.footer {
+    &--margin {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,123 @@
+.destaques {
+    // margin: 5rem 0rem;
+    padding: 2rem;
+    @include flex($gap: 4rem);
+
+    &__titulo {
+        @include flex($gap: 1.5rem);
+    }
+
+    &__h2 {
+        font-size: 1.2rem;
+        letter-spacing: 0.5rem;
+        font-weight: 400;
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        text-decoration: none;
+    }
+
+    &__opcoes {
+        @include flex($flow: row, $gap: 2rem);
+        max-width: 200rem;
+    }
+
+    &__opcao {
+        @include flex($flow: row);
+
+        @include respond(medium) {
+            &:last-of-type {
+                display: none;
+            }
+        }
+
+        @include respond(small) {
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+
+        @include respond(mini) {
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+
+        border-radius: 2rem;
+        transition: all ease 0.2s;
+
+        &:hover {
+            transform: scale(1.05);
+
+            & img {
+                transition: all linear 0.3s;
+                box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, 0.35);
+            }
+        }
+
+        &-titulo {
+            @include grid(
+                $flow: column,
+                $j-items: left,
+                $a-items: start,
+                $j-content: normal
+            );
+            height: 100%;
+            width: 100%;
+            padding: 2rem;
+            position: absolute;
+            grid-template-rows: 1fr 1fr;
+
+            div {
+                @include flex($gap: 0.5rem, $a-items: start);
+                margin-top: 1rem;
+            }
+        }
+
+        &-botao {
+            align-self: flex-end;
+            justify-self: flex-end;
+
+            font-size: 1.3rem;
+            color: black;
+            padding: 1rem 2rem;
+            border-radius: 3rem;
+            background-color: white;
+        }
+    }
+
+    &__span {
+        font-size: 1.4rem;
+        color: $cor-cinza-claro;
+    }
+
+    &__h3 {
+        font-size: 3.6rem;
+        color: white;
+        white-space: nowrap;
+        @include respond(big) {
+            white-space: wrap;
+        }
+
+        word-spacing: -2px;
+    }
+
+    &__p {
+        color: white;
+        font-size: 1.6rem;
+    }
+
+    &__imagem {
+        max-width: 29.7rem;
+        // height: 12.94rem;
+        // height: 100%;
+
+        & img {
+            aspect-ratio: 10/16;
+            width: 100%;
+            border-radius: 2rem;
+        }
+    }
+}

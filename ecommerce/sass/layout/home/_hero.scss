@@ -1,0 +1,8 @@
+.hero {
+    &__video {
+        width: 100%;
+    }
+    @include respond(mini) {
+        display: none;
+    }
+}

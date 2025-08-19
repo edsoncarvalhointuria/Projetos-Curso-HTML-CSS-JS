@@ -1,0 +1,12 @@
+.loja {
+    display: flex;
+    justify-content: center;
+    &__container {
+        max-width: 180rem;
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+@import "../layout/loja/filtro";
+@import "../layout/loja/produtos";

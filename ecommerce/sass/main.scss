@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+//Abstract
+@import "abstracts/abstract";
+
+// 1. Vendors
+@import "vendors/normalize";
+
+// 2. Base stuff
+@import "base/base";
+
+// 3. Layout-related sections
+@import "layout/footer";
+@import "layout/header";
+@import "layout/newsletter";
+
+// @import "layout/hero";
+// @import "layout/por-tamanho";
+// @import "layout/destaques";
+// @import "layout/banners";
+// @import "layout/newsletter";
+
+// 4. Components
+@import "components/button";
+@import "components/slider";
+@import "components/produto";
+
+// 5. Pages
+@import "pages/home";
+@import "pages/loja";
+@import "pages/item";
+@import "pages/carrinho";
+@import "pages/checkout";
+@import "pages/minha-conta";
+@import "pages/meus-pedidos";
+
+// 6. Themes
+@import "themes/default";

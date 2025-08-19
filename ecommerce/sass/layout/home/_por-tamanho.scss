@@ -1,0 +1,99 @@
+.por-tamanho {
+    // padding: 2rem;
+    @include flex($gap: 4rem);
+
+    &__titulo {
+        @include flex($gap: 1.5rem);
+    }
+
+    &__h2 {
+        font-size: 1.2rem;
+        letter-spacing: 0.5rem;
+        font-weight: 400;
+    }
+
+    &__carrossel {
+        @include flex();
+        position: relative;
+
+        &-container {
+            overflow: hidden;
+        }
+
+        &-opcoes {
+            transform: translateX(calc(calc($tamanho-carrossel + 1rem) * -0));
+            transition: transform ease-out 0.4s;
+
+            @include flex($flow: row, $gap: 1rem, $j-content: left);
+            max-width: 85rem;
+
+            @include respond(small) {
+                max-width: 95vw;
+            }
+
+            &-container {
+                @include flex($gap: 2rem);
+            }
+        }
+
+        &-opcao {
+            height: $tamanho-carrossel;
+            width: $tamanho-carrossel;
+
+            @include respond(small) {
+                height: $tamanho-carrossel - 2rem;
+                width: $tamanho-carrossel - 2rem;
+            }
+
+            aspect-ratio: 1/1;
+            border: 0.4rem solid rgba($cor-cinza, 0.3);
+            border-radius: 50%;
+            @include flex();
+
+            &:hover {
+                background-image: linear-gradient(white, white),
+                    linear-gradient(#f09, #ffb321);
+                background-origin: border-box;
+                background-clip: content-box, border-box;
+            }
+
+            a {
+                display: block;
+                @include flex();
+            }
+
+            img {
+                width: 95%;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.seta {
+    @include flex();
+    font-size: 10rem;
+    width: 10rem;
+    position: absolute;
+    top: -5%;
+    cursor: pointer;
+    transition: all ease-in 0.2s;
+    @include respond(medium) {
+        display: none;
+    }
+
+    &-esquerda {
+        left: -10%;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    &-direita {
+        right: -10%;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

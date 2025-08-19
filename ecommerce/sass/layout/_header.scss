@@ -1,0 +1,489 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 10;
+
+    &__container {
+        @include flex($flow: row, $j-content: stretch, $gap: 4rem);
+        position: relative;
+    }
+
+    &__div-logo {
+        padding: 3rem 5rem;
+
+        @include respond(medium) {
+            position: absolute;
+            right: 50%;
+            transform: translateX(50%);
+            z-index: 10;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+    }
+
+    &__menu-hamburguer {
+        display: none;
+
+        @include respond(medium) {
+            display: block;
+            padding: 1rem;
+            z-index: 10;
+
+            &-img {
+                width: 3rem;
+            }
+
+            &.abrir {
+                transition: all ease 0.2s;
+                transform: rotate(360deg);
+
+                & .header__menu-hamburguer-img {
+                    display: none;
+                }
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 3rem;
+                    height: 3rem;
+                    background-image: url(https://www.svgrepo.com/show/524430/close-circle.svg);
+                    background-position: 50%;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+}
+
+.nav {
+    @include flex($flow: row, $j-content: space-between);
+    width: 100%;
+
+    @include respond(medium) {
+        justify-content: right;
+    }
+
+    &__item {
+        a {
+            text-decoration: none;
+        }
+        &:hover {
+            & .nav__opcoes {
+                @include flex(
+                    $flow: row,
+                    $gap: 3rem,
+                    $j-content: stretch,
+                    $a-items: flex-start
+                );
+            }
+        }
+    }
+
+    &__links-lista {
+        @include flex($flow: row, $gap: 2rem);
+        list-style: none;
+
+        @include respond(medium) {
+            display: flex;
+            gap: 0;
+            flex-flow: column;
+            position: absolute;
+            background-color: white;
+            top: 100%;
+            min-width: 100%;
+            align-items: flex-end;
+            justify-content: flex-start;
+            height: calc(100vh - 56.51px);
+            box-shadow: 0px 1px rgb(238, 229, 229);
+            scrollbar-width: none;
+            overflow-y: scroll;
+            transition: transform ease-in-out 0.5s;
+            transform: translateX(-100%);
+
+            & .nav__item {
+                cursor: pointer;
+                width: 100%;
+                border-top: solid rgb(238, 229, 229) 1px;
+
+                &:last-of-type {
+                    border-bottom: solid rgb(238, 229, 229) 1px;
+                }
+
+                & .nav__opcoes {
+                    transition: max-height ease-in-out 0.2s;
+                    position: static;
+                    display: flex;
+                    overflow: hidden;
+                    max-height: 0;
+                    padding: 0;
+                    background-color: #f5f5f5;
+
+                    & a {
+                        text-decoration: none;
+                    }
+
+                    a::after {
+                        content: "";
+                    }
+
+                    & > a {
+                        display: none;
+                    }
+
+                    &-img {
+                        display: none;
+                    }
+
+                    & .nav__lista {
+                        display: none;
+                    }
+                }
+
+                & .nav__container-lista {
+                    flex-flow: column;
+                    padding: 2rem;
+                }
+
+                &--abrir {
+                    & .nav__opcoes {
+                        transition: max-height ease-in-out 1s;
+                        max-height: 100rem;
+                    }
+
+                    & .nav__link {
+                        &::after {
+                            transform: rotate(270deg);
+                        }
+                    }
+
+                    // &:hover {
+                    //     & .nav__opcoes {
+                    //         display: flex;
+                    //     }
+                    // }
+                }
+            }
+            & .nav__link {
+                display: flex;
+                justify-content: space-between;
+                padding: 2rem;
+                &::after {
+                    transition: all ease-out 0.3s;
+                    content: "";
+                    background-image: url("../images/right-arrow-svgrepo-com.svg");
+                    background-position: 50%;
+                    background-color: transparent;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 2rem;
+                    height: 2rem;
+                    display: block;
+                    transform: rotate(90deg);
+                }
+            }
+
+            &.abrir {
+                transform: translateX(0%);
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: black;
+        padding: 4.63rem 0rem;
+
+        &::after {
+            content: "";
+            display: block;
+            background-color: black;
+            width: 0px;
+            height: 0.1rem;
+            transition: all ease-in 0.3s;
+        }
+
+        &:hover::after {
+            width: 100%;
+            @include respond(medium) {
+                width: 2rem;
+            }
+        }
+
+        &--vermelho {
+            color: red;
+
+            &::after {
+                background-color: red;
+            }
+        }
+    }
+
+    &__usuario-logado {
+        display: none;
+    }
+
+    &__outros {
+        padding: 2rem;
+        @include flex($flow: row, $gap: 2rem);
+
+        & img {
+            cursor: pointer;
+            transition: all ease-in 0.1s;
+
+            &:hover {
+                transform: scale(1.1);
+                filter: invert(29%) sepia(93%) saturate(7453%);
+            }
+        }
+
+        &.logado {
+            & .nav__usuario {
+                display: none;
+
+                &-logado {
+                    display: block;
+                    position: relative;
+
+                    &-opcoes {
+                        display: none;
+                        position: absolute;
+                        background-color: #fff;
+                        width: max-content;
+                        top: 100%;
+                        left: 50%;
+                        transform: translate(-50%, 2%);
+                        border-radius: 0.5rem;
+                        box-shadow: 0 0 0.9rem rgba(0, 0, 0, 0.482);
+                        font-size: 1.4rem;
+                        color: $cor-cinza;
+                        padding: 3rem 2rem;
+
+                        & span {
+                            text-transform: uppercase;
+                        }
+
+                        & a {
+                            text-decoration: none;
+                            color: inherit;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+
+                        & hr {
+                            width: 100%;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            display: block;
+                            top: 0;
+                            right: 50%;
+                            transform: translate(50%, -95%);
+
+                            border: 1rem solid transparent;
+                            border-bottom-color: white;
+                        }
+
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            display: block;
+                            top: 0;
+                            right: 50%;
+                            transform: translate(50%, -105%);
+                            // height: 1rem;
+                            // width: 1rem;
+                            // background-color: white;
+                            // box-shadow: 0 0 0.9rem black;
+                            // shadow
+
+                            border: 1rem solid transparent;
+                            border-bottom-color: rgba(0, 0, 0, 0.2);
+                            filter: blur(1px);
+                        }
+                    }
+
+                    &--menu {
+                        & .nav__usuario-logado-opcoes {
+                            @include flex($a-items: start, $gap: 1.1rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__div-carrinho {
+        position: relative;
+    }
+
+    &__items-carrinho {
+        display: none;
+        position: absolute;
+
+        top: 0;
+        right: 0;
+        transform: translate(25%, -40%);
+        font-size: 1rem;
+        color: white;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 50%;
+        background-color: red;
+
+        &--visivel {
+            @include flex();
+        }
+    }
+
+    &__form {
+        position: relative;
+        @include respond(medium) {
+            display: none;
+        }
+
+        &-input {
+            padding: 1rem 5rem 1rem 1rem;
+            font-size: 1.2rem;
+            border-radius: 2rem;
+            border: none;
+            border: 0.1rem solid $cor-cinza;
+
+            &:focus-visible {
+                outline: none;
+            }
+        }
+
+        &-botao {
+            border: none;
+            border-radius: 2rem;
+            position: absolute;
+
+            right: 0%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30%;
+            height: 100%;
+            background: none;
+            cursor: pointer;
+
+            & img {
+                filter: invert(100%);
+            }
+
+            &:hover img {
+                transform: scale(1.1);
+                filter: invert(29%) sepia(93%) saturate(7453%);
+            }
+        }
+    }
+
+    &__opcoes {
+        // transition: max-height ease-in-out 0.2s;
+        background-color: white;
+        display: none;
+        padding: 1rem 3rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        & div {
+            img {
+                width: 100%;
+            }
+        }
+
+        box-shadow: 0rem 0.5rem 0.5rem 0rem rgb(0, 0, 0, 0.1);
+    }
+
+    &__container-lista {
+        @include flex(
+            $flow: row,
+            $gap: 5rem,
+            $j-content: left,
+            $a-items: flex-start
+        );
+        width: 100%;
+        padding: 1rem;
+
+        ul {
+            list-style: none;
+        }
+    }
+
+    &__lista {
+        @include flex($a-items: flex-start, $gap: 1rem);
+
+        &-titulo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            padding-bottom: 1rem;
+            color: black;
+
+            &:hover,
+            :active {
+                text-decoration: underline;
+                text-decoration-color: black;
+                text-decoration-line: underline;
+            }
+        }
+
+        & a {
+            &:link,
+            &:visited {
+                text-decoration: none;
+                font-size: 1.4rem;
+                color: $cor-cinza;
+            }
+
+            &:hover,
+            :active {
+                text-decoration: underline;
+                text-decoration-color: $cor-cinza;
+                text-decoration-line: underline;
+            }
+
+            &.header__lista-ver-todos {
+                padding-top: 0.2rem;
+                &:link,
+                &:visited {
+                    text-decoration: underline;
+                    text-decoration-color: $cor-cinza;
+                    text-decoration-line: underline;
+                }
+            }
+        }
+    }
+}
+
+.header--checkout {
+    & .nav {
+        display: none;
+    }
+
+    & .header__menu-hamburguer {
+        display: none;
+    }
+
+    & .header__div-logo {
+        margin: auto;
+        position: static;
+        transform: none;
+        padding: 2rem 5rem;
+    }
+
+    & .header__logo {
+        content: url("../images/reserva.svg");
+    }
+}

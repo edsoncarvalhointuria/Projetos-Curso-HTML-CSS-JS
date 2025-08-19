@@ -1,0 +1,478 @@
+.carrinho {
+    background-color: #f2f2f2;
+    padding: 4.5rem 3rem;
+    display: flex;
+    gap: 2rem;
+
+    @include respond(medium) {
+        flex-flow: column;
+        align-items: center;
+    }
+
+    &__infos {
+        flex: 1;
+        background-color: white;
+        padding: 2rem 3rem;
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        gap: 3rem;
+    }
+
+    &__h1 {
+        font-family: serif;
+        font-weight: 700;
+        line-height: 1;
+        margin: 1rem 0;
+    }
+
+    &__info {
+        font-size: 1.4rem;
+        line-height: 2;
+        span {
+            color: $verde;
+        }
+    }
+
+    &__table {
+        border-collapse: collapse;
+
+        & .carrinho__table-pacote ~ tr {
+            border-top: 1px solid rgba($cor-cinza, 0.5);
+        }
+
+        & .carrinho__table-pacote + tr {
+            border: none;
+        }
+
+        & .carrinho__table-pacote {
+            border: none !important;
+        }
+
+        &-titulo {
+            font-weight: 700;
+            font-size: 1.4rem;
+            justify-self: center;
+            text-transform: uppercase;
+
+            &:first-child {
+                text-align: left;
+            }
+        }
+
+        &-body {
+            position: relative;
+        }
+
+        &-id {
+            font-size: 1.4rem;
+            font-weight: 700;
+            padding-bottom: 1rem;
+            width: 100%;
+            margin-top: 3rem;
+
+            border-bottom: 1px solid rgba($cor-cinza, 0.6);
+        }
+
+        &-aviso {
+            font-size: 1.1rem;
+            padding-top: 0.1rem;
+        }
+    }
+
+    &__prods {
+        display: grid;
+        grid-auto-flow: row;
+        justify-content: space-between;
+        justify-items: left;
+        align-content: center;
+        align-items: center;
+        gap: 0;
+        position: relative;
+        padding: 1rem;
+        row-gap: 1rem;
+        grid-template-columns: repeat(5, auto);
+    }
+
+    &__prod {
+        display: flex;
+        flex-flow: column;
+        align-items: start;
+        font-weight: 700;
+        max-width: 40rem;
+        overflow: hidden;
+        @include respond(mini-small) {
+            position: relative;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        &-div {
+            padding-top: 2rem;
+            padding-bottom: 1.7rem;
+            display: flex;
+            gap: 2rem;
+        }
+
+        &-imagem {
+            max-width: 7rem;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-infos {
+            display: flex;
+            flex-flow: column;
+            gap: 1rem;
+        }
+
+        &-nome {
+            text-transform: capitalize;
+            font-size: 1.4rem;
+        }
+
+        &-grade {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 1rem;
+            font-size: 1.2rem;
+
+            @include respond(mini-small) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        &-tamanho,
+        &-cor {
+            text-transform: uppercase;
+            span {
+                color: rgb(255, 84, 84);
+            }
+        }
+
+        .carrinho__prod-del,
+        .carrinho__prod-edit {
+            text-decoration: solid;
+            text-decoration-line: underline;
+            display: flex;
+            align-items: end;
+            gap: 0.3rem;
+        }
+
+        &-del {
+            position: relative;
+            &::after {
+                content: "|";
+                display: block;
+                position: absolute;
+                left: 80%;
+
+                @include respond(small-mini) {
+                    display: none;
+                }
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                background-image: url(https://www.svgrepo.com/show/502608/delete-2.svg);
+                background-position: 50%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 1.5rem;
+                width: 1.5rem;
+
+                @include respond(mini-small) {
+                    height: 2rem;
+                    width: 2rem;
+                }
+            }
+
+            @include respond(mini-small) {
+                font-size: 0;
+                position: absolute;
+                top: 2rem;
+                right: 0;
+            }
+        }
+
+        &-edit {
+            &::before {
+                content: "";
+                display: block;
+                background-image: url(https://www.svgrepo.com/show/503019/edit.svg);
+                background-position: 50%;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 1.5rem;
+                width: 1.5rem;
+
+                @include respond(mini-small) {
+                    height: 2rem;
+                    width: 2rem;
+                }
+            }
+
+            @include respond(mini-small) {
+                font-size: 0;
+                position: absolute;
+                right: 0;
+            }
+        }
+
+        &-presente {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap-reverse;
+            gap: 0.7rem;
+
+            & p {
+                font-size: 1.2rem;
+                color: $cor-cinza;
+            }
+
+            & input {
+                border-radius: 0;
+            }
+        }
+    }
+
+    &__entrega {
+        font-size: 1.2rem;
+        text-align: center;
+        color: $cor-cinza;
+    }
+
+    &__valor {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        &-v {
+            color: $cor-cinza-claro;
+            text-decoration: line-through;
+            font-size: 1.2rem;
+        }
+
+        &-n {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__quantidade {
+        display: flex;
+        gap: 0.1rem;
+        align-items: center;
+        justify-content: center;
+
+        &-menos,
+        &-mais {
+            height: 2.5rem;
+            width: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            border-radius: 0.5rem;
+        }
+    }
+
+    & .carrinho__quantidade-numero {
+        height: 2.5rem;
+        width: 3rem;
+        border: none;
+        text-align: center;
+        padding: 0;
+    }
+
+    &__total {
+        font-size: 1.4rem;
+        text-align: center;
+        white-space: nowrap;
+
+        @include respond(small-mini) {
+            font-weight: 700;
+            padding: 1rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__cashback {
+        position: absolute;
+        right: 0;
+        span {
+            color: $verde;
+        }
+
+        @include respond(small-mini) {
+            position: static;
+        }
+    }
+
+    // finalizar
+    &__finalizar {
+        align-self: flex-start;
+        max-width: 32.5rem;
+        width: 35.403vw;
+        padding: 3.5rem 2rem;
+        background-color: white;
+        font-size: 1.3rem;
+
+        @include respond(medium) {
+            align-self: center;
+            min-width: 40rem;
+        }
+
+        @include respond(mini) {
+            min-width: 100%;
+        }
+
+        display: flex;
+        flex-flow: column;
+
+        div,
+        form {
+            padding: 1.2rem 0;
+            border-top: 1px solid $cor-cinza-claro;
+        }
+
+        &-total,
+        &-cupom,
+        &-form,
+        &-cashback,
+        &-quantidade {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-h2 {
+            display: flex;
+            flex-flow: column wrap;
+            font-weight: 700;
+            font-size: 2.4rem;
+            font-family: serif;
+            margin-bottom: 3rem;
+            white-space: nowrap;
+
+            span {
+                color: $verde;
+                white-space: nowrap;
+            }
+
+            @include respond(medium) {
+                flex-flow: row;
+                gap: 0.7rem;
+            }
+        }
+
+        &-form {
+            align-items: stretch;
+            gap: 0.1rem;
+
+            input {
+                font-size: 1.3rem;
+                min-height: 100%;
+                width: 100%;
+                padding: 0.5rem;
+            }
+
+            button {
+                padding: 1rem;
+                background: black;
+                color: white;
+                font-size: 1.4rem;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    background: lighten(black, 20%);
+                }
+            }
+        }
+
+        &-cupom {
+            a {
+                color: inherit;
+            }
+        }
+
+        &-cashback {
+            font-size: 1.1rem;
+            font-weight: 700;
+            span {
+                color: $verde;
+            }
+        }
+
+        &-btn {
+            button {
+                font-size: 1.4rem;
+                @extend %btn;
+
+                border-radius: 0;
+            }
+        }
+    }
+
+    @include respond(small-mini) {
+        &__thead {
+            display: none;
+        }
+
+        &__td {
+            &-carrinho,
+            &-valor {
+                display: none;
+            }
+        }
+    }
+
+    @include respond(mini) {
+        &__desc {
+            text-align: center;
+        }
+
+        & tr:not([class]) {
+            display: grid;
+
+            grid-template-columns: auto auto;
+            align-items: end;
+
+            @include respond(mini-small) {
+                grid-template-columns: auto;
+                align-items: center;
+            }
+        }
+
+        &__td {
+            &-prod {
+                grid-row: 1 / span 2;
+            }
+
+            &-quantidade {
+                order: 1;
+                align-self: flex-start;
+            }
+        }
+    }
+
+    @include respond(mini-small) {
+        &__td {
+            &-prod {
+                grid-column: 1 / span 2;
+            }
+
+            &-quantidade {
+                order: 0;
+                align-self: center;
+                margin: 1rem;
+            }
+        }
+    }
+}
