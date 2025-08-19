@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", () => {
     //Global
     const filmes = JSON.parse(localStorage.getItem("FILMES")) ?? {};
     let resultado;
@@ -139,9 +139,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         e.preventDefault();
 
         try {
-            const link = `https://blossom-habitual-yacht.glitch.me/get/omdbapi/${formatFilmName(
+            const key = window.OMDB_API_KEY;
+            const link = `http://www.omdbapi.com/?apikey=${key}&t=${formatFilmName(
                 $filmName.value
-            )}/${formatFilmYear($filmYear.value) || "not"}`;
+            )}&y=${formatFilmYear($filmYear.value)}`;
 
             const request = await fetch(link);
             const json = await request.json();
