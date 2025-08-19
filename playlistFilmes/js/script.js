@@ -139,7 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
 
         try {
-            console.log(key);
             const link = `https://www.omdbapi.com/?apikey=${key}&t=${formatFilmName(
                 $filmName.value
             )}&y=${formatFilmYear($filmYear.value)}`;
