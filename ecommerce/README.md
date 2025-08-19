@@ -1,4 +1,4 @@
-# 📈 Ecommerce
+# 🛒 Ecommerce
 
 ## ✨ Sobre
 
@@ -6,7 +6,7 @@ Este projeto é uma reprodução estática inspirada no site da **Reserva**, des
 
 > 🔍 **Observação:** Este projeto não tem fins comerciais.
 
-📌 **Acesse:**[Link do projeto]()
+📌 **Acesse:**[Link do projeto](https://ecommerce-fakereserva.netlify.app/)
 
 ---
 
